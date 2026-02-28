@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MyOrders from "./pages/MyOrders"; 
+import MyOrders from "./pages/MyOrders";
 import Profile from "./pages/Profile";
 import Cart from "./pages/Cart"; // Naya Import
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -21,7 +21,7 @@ function App() {
         <BrowserRouter>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            
+
             <main className="flex-grow">
               <Routes>
                 {/* Public Routes */}
@@ -40,15 +40,15 @@ function App() {
                 />
                 // App.jsx mein ye line wapas add karein
 
-// ... andar Routes mein:
-<Route 
-  path="/orders" 
-  element={
-    <ProtectedRoute>
-      <MyOrders />
-    </ProtectedRoute>
-  } 
-/>
+                // ... andar Routes mein:
+                <Route
+                  path="/orders"
+                  element={
+                    <ProtectedRoute>
+                      <MyOrders />
+                    </ProtectedRoute>
+                  }
+                />
                 <Route
                   path="/profile"
                   element={
@@ -64,8 +64,8 @@ function App() {
                       <Cart />
                     </ProtectedRoute>
                   }
-                  />
-                  {/* <Route path="/orders" element={<ProtectedRoute><MyOrders /></ProtectedRoute>} />   */}
+                />
+                {/* <Route path="/orders" element={<ProtectedRoute><MyOrders /></ProtectedRoute>} />   */}
               </Routes>
             </main>
 

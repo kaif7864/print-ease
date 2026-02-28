@@ -9,11 +9,11 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const verifySession = async () => {
       const token = localStorage.getItem("token");
-      
+      const BASE_URL = import.meta.env.VITE_API_URL;
       if (token) {
         try {
           // Backend se fresh data mangwayein
-          const res = await fetch("http://127.0.0.1:8000/profile", {
+          const res = await fetch(`${BASE_URL}/profile`, {
             headers: { Authorization: `Bearer ${token}` },
           });
 

@@ -29,10 +29,10 @@ export default function Cart() {
 
     formData.append("payment_id", paymentId);
     formData.append("total_amount", totalAmount);
-
+const BASE_URL = import.meta.env.VITE_API_URL;
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:8000/orders/create-order", {
+      const res = await fetch(`${BASE_URL}/orders/create-order`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

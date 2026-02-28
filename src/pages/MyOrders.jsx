@@ -4,9 +4,9 @@ import { Package, Clock, CheckCircle, FileText } from "lucide-react";
 export default function MyOrders() {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const BASE_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
-    fetch("http://localhost:8000/orders/my-orders", {
+    fetch(`${BASE_URL}/orders/my-orders`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
       .then(res => res.json())

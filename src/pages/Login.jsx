@@ -11,13 +11,13 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
 
 // ... (baki imports same rahenge)
-
+const BASE_URL = import.meta.env.VITE_API_URL;
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
       // DHAYAN DEIN: Yahan "/auth" prefix add karna zaroori hai
-      const res = await fetch("http://127.0.0.1:8000/auth/login", { 
+      const res = await fetch(`${BASE_URL}/auth/login`, { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
