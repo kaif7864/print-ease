@@ -11,6 +11,10 @@ import Cart from "./pages/Cart"; // Naya Import
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AdminRoute from "./components/AdminRoute" // Naya Import
+import AdminOrders from "./pages/AdminOrders"; // Naya Import
+import ForgotPassword from "./pages/ForgotPassword"; // Naya Import
+
 
 function App() {
   return (
@@ -38,6 +42,14 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
+                <Route
+                  path="/forgotpassword"
+                  element={
+                    
+                      <ForgotPassword />
+                    
+                  }
+                />
                 // App.jsx mein ye line wapas add karein
 
                 // ... andar Routes mein:
@@ -47,6 +59,14 @@ function App() {
                     <ProtectedRoute>
                       <MyOrders />
                     </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/admin-orders"
+                  element={
+                    <AdminRoute>
+                      <AdminOrders />
+                    </AdminRoute>
                   }
                 />
                 <Route
