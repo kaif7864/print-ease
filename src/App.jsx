@@ -4,15 +4,15 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
-import IDForm from "./components/ComingSoonPage";
+import IDForm from "./services/Pan";
 import PrintListPage from "./components/PrintList";
 import WalletPage from "./components/WalletPage";
 import AddMoneyPage from "./components/AddMoneyPage";
 import ComingSoonPage from "./components/ComingSoonPage";
-import NotforYou from "./components/ComingSoonPage";
+import NotforYou from "./services/marksheets/MarksheetSelection";
 import MarksheetSelection from "./services/marksheets/MarksheetSelection";
-import MarksheetForm from "./components/ComingSoonPage";
-import AadhaarExtractor from "./components/ComingSoonPage";
+import MarksheetForm from "./services/marksheets/MarksheetForm";
+import AadhaarExtractor from "./services/aadhar/AadhaarExtractor";
 
 // 🔥 Protected Route Wrapper Component
 const ProtectedRoute = ({ children, isAuthenticated }) => {
