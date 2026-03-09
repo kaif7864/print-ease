@@ -12,7 +12,7 @@ import ComingSoonPage from "./components/ComingSoonPage";
 import NotforYou from "./services/marksheets/MarksheetSelection";
 import MarksheetSelection from "./services/marksheets/MarksheetSelection";
 import MarksheetForm from "./services/marksheets/MarksheetForm";
-import AadhaarExtractor from "./services/aadhar/AadhaarExtractor";
+import AadhaarExtractor from "./services/aadhaar/AadhaarExtractor";
 
 // 🔥 Protected Route Wrapper Component
 const ProtectedRoute = ({ children, isAuthenticated }) => {
